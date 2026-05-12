@@ -1,0 +1,115 @@
+import type { User } from '../types/user'
+
+export const MOCK_USERS: User[] = [
+  {
+    id: 'usr-001',
+    name: 'Aarav Sharma',
+    email: 'aarav.sharma@enterprise.io',
+    role: 'Admin',
+    status: 'Active',
+    lastLogin: '2026-05-11T11:20:00.000Z',
+    activityLevel: 'High',
+    groups: ['Platform', 'Security'],
+    permissions: ['users:read', 'users:write', 'billing:read'],
+    createdAt: '2026-05-10T09:00:00.000Z',
+    details: {
+      recentActivityLogs: [
+        'Approved new vendor access request',
+        'Reviewed monthly security dashboard',
+        'Exported user access audit report',
+      ],
+      updatesMade: [
+        'Updated billing view permissions',
+        'Edited platform onboarding checklist',
+      ],
+      loginAttempts: ['Successful - 2026-05-11 11:20', 'Successful - 2026-05-10 08:10'],
+    },
+    security: {
+      twoFactorEnabled: true,
+      passwordAgeDays: 22,
+      lastPasswordUpdate: '2026-04-20T10:00:00.000Z',
+      securitySettings: ['SSO enforced', 'IP allowlist enabled', 'Session timeout 30m'],
+    },
+  },
+  {
+    id: 'usr-002',
+    name: 'Sophia Patel',
+    email: 'sophia.patel@enterprise.io',
+    role: 'Manager',
+    status: 'Active',
+    lastLogin: '2026-05-09T18:00:00.000Z',
+    activityLevel: 'Medium',
+    groups: ['Operations'],
+    permissions: ['users:read', 'reports:read'],
+    createdAt: '2025-12-19T07:10:00.000Z',
+    details: {
+      recentActivityLogs: [
+        'Reviewed daily operations summary',
+        'Assigned report access to team lead',
+      ],
+      updatesMade: [
+        'Updated team escalation policy',
+        'Modified region-specific report filters',
+      ],
+      loginAttempts: ['Successful - 2026-05-09 18:00', 'Failed - 2026-05-08 09:41'],
+    },
+    security: {
+      twoFactorEnabled: true,
+      passwordAgeDays: 41,
+      lastPasswordUpdate: '2026-04-01T06:50:00.000Z',
+      securitySettings: ['Device trust required', 'Geo login alert enabled'],
+    },
+  },
+  {
+    id: 'usr-003',
+    name: 'Liam Verma',
+    email: 'liam.verma@enterprise.io',
+    role: 'Viewer',
+    status: 'Inactive',
+    lastLogin: '2026-02-08T08:30:00.000Z',
+    activityLevel: 'Low',
+    groups: ['Analytics'],
+    permissions: ['reports:read'],
+    createdAt: '2025-08-01T14:15:00.000Z',
+    details: {
+      recentActivityLogs: [
+        'Viewed quarterly analytics dashboard',
+        'Downloaded KPI snapshot',
+      ],
+      updatesMade: ['No profile updates in last 30 days'],
+      loginAttempts: ['Successful - 2026-02-08 08:30', 'Failed - 2026-02-05 21:03'],
+    },
+    security: {
+      twoFactorEnabled: false,
+      passwordAgeDays: 93,
+      lastPasswordUpdate: '2026-02-08T08:20:00.000Z',
+      securitySettings: ['Basic password policy only'],
+    },
+  },
+  {
+    id: 'usr-004',
+    name: 'Mia Khan',
+    email: 'mia.khan@enterprise.io',
+    role: 'Editor',
+    status: 'Pending',
+    lastLogin: '2026-05-08T13:45:00.000Z',
+    activityLevel: 'Medium',
+    groups: ['Content', 'Growth'],
+    permissions: ['content:read', 'content:write'],
+    createdAt: '2026-05-07T12:00:00.000Z',
+    details: {
+      recentActivityLogs: [
+        'Drafted homepage campaign copy',
+        'Reviewed content moderation queue',
+      ],
+      updatesMade: ['Updated campaign metadata tags', 'Reordered media asset library'],
+      loginAttempts: ['Successful - 2026-05-08 13:45', 'Successful - 2026-05-08 09:16'],
+    },
+    security: {
+      twoFactorEnabled: true,
+      passwordAgeDays: 5,
+      lastPasswordUpdate: '2026-05-07T12:30:00.000Z',
+      securitySettings: ['Phishing-resistant 2FA', 'New device approval required'],
+    },
+  },
+]
